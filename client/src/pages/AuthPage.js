@@ -22,6 +22,7 @@ const AuthPage = () => {
             localStorage.setItem('isAuth', true)
 
             navigate(MAINPAGE_ROUTE);
+            window.location.reload()
         } catch (error) {
             if (error.response.status === 404 || error.response.status === 500) {
                 setShow(true);

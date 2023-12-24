@@ -14,10 +14,6 @@ export const authRoutes = [
         Component: AddEvent
     },
     {
-        path: MAINPAGE_ROUTE,
-        Component: MainPage
-    },
-    {
         path: OFFENSIVE_ROUTE,
         Component: OffensivePage
     },
@@ -39,5 +35,9 @@ export const publicRoutes = [
     {
         path: LOGIN_ROUTE,
         Component: AuthPage 
+    },
+    {
+        path: MAINPAGE_ROUTE,
+        Component: MainPage
     },
 ]

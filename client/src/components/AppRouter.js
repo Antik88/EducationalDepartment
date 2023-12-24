@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { authRoutes, publicRoutes } from '../routes';
 import { observer } from 'mobx-react-lite';
-import { LOGIN_ROUTE, MAINPAGE_ROUTE } from '../utils/consts';
+import { MAINPAGE_ROUTE } from '../utils/consts';
 
 const AppRouter = () => {
     const isAuth = localStorage.getItem('isAuth');

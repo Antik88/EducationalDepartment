@@ -35,7 +35,6 @@ function AddEvent() {
 	const [subdivision, setSubdivision] = useState("");
 	const [eventName, setEventName] = useState("");
 	const [eventGoal, setEventGoal] = useState("");
-	// const [direction, setDirection] = useState("");
 	const [note, setNote] = useState()
 	const [inviteItem, setInviteItem] = useState()
 
@@ -44,6 +43,8 @@ function AddEvent() {
 	const [dateLine, setDateLine] = useState(null);
 
 	const [open, setOpen] = React.useState(false);
+	const [filde, setFilde] = React.useState(false);
+
 	const handleClick = () => {
 		setOpen(true);
 	};
@@ -53,9 +54,9 @@ function AddEvent() {
 			return;
 		}
 		setOpen(false);
+		setFilde(false);
 	};
 
-	// ?	
 	const decanat = 2
 
 	useEffect(() => {
@@ -78,10 +79,15 @@ function AddEvent() {
 				employeers: dataStore.selectedEmployers,
 				student: dataStore.selectedStudents
 			}
-		}
+		};
 
-		createEvent(event).then((data) => console.log(data))
-		handleClick()
+		if (!eventName || !subdivision || !dischipl || !dateLine || !eventGoal || !note
+			|| !dataStore.selectedEmployers) {
+				setFilde(true)
+		} else {
+			createEvent(event).then((data) => console.log(data))
+			handleClick()
+		}
 	}
 
 	const handleDateChange = (date) => {
@@ -171,29 +177,6 @@ function AddEvent() {
 							</Select>
 						</FormControl>
 					</Grid>
-					{/* <Grid item>
-						{subdivision === 1 && (
-							<FormGroup>
-								<FormControl sx={{ mt: 2, width: 300 }}>
-									<InputLabel id="additional-select-label">Напрвление</InputLabel>
-									<Select
-										labelId="additional-select-label"
-										id="additional-select"
-										value={direction}
-										label="Направление"
-										onChange={(event) => setDirection(event.target.value)}
-									>
-										<MenuItem value={4}>идиологическое воспитание</MenuItem>
-										<MenuItem value={5}>граждансткое и патриотическое воспитание</MenuItem>
-										<MenuItem value={6}>духовно-нравственное воспитание</MenuItem>
-										<MenuItem value={6}>эстетическое воспитание</MenuItem>
-										<MenuItem value={6}>воспитание физической культуры</MenuItem>
-										<MenuItem value={6}>формирование навыков здорового образа жизни</MenuItem>
-									</Select>
-								</FormControl>
-							</FormGroup>
-						)}
-					</Grid> */}
 				</Grid>
 				<FormGroup sx={{ width: 500 }}>
 					<Textarea
@@ -253,6 +236,11 @@ function AddEvent() {
 			<Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
 				<Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
 					Мероприятие добавлено
+				</Alert>
+			</Snackbar>
+			<Snackbar open={filde} autoHideDuration={6000} onClose={handleClose}>
+				<Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
+					Заполните все поля
 				</Alert>
 			</Snackbar>
 		</Container >

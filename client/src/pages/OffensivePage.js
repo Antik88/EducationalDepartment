@@ -32,7 +32,10 @@ function OffensivePage() {
                     </Button>
                 </Box>
             </Container>
-            <AddOffensiveModal show={addModel} hide={() => setAddModel(false)} />
+            <AddOffensiveModal show={addModel} hide={() => {
+                setAddModel(false)
+                window.location.reload()
+                }}/>
             <OffensiveTable show={tableModel} hide={() => setTableModel(false)} />
         </>
     )
