@@ -1,0 +1,68 @@
+{
+  "name": "eddepartament",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.14",
+    "@mui/joy": "^5.0.0-beta.11",
+    "@mui/material": "^5.14.14",
+    "@mui/x-data-grid": "^6.16.3",
+    "@mui/x-date-pickers": "^6.16.2",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.6.2",
+    "dayjs": "^1.11.10",
+    "dotenv": "^16.3.1",
+    "install": "^0.13.0",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.8.1",
+    "mobx": "^6.10.2",
+    "mobx-react-lite": "^4.0.5",
+    "npm": "^10.2.5",
+    "pdfmake": "^0.2.8",
+    "react": "^18.2.0",
+    "react-datepicker": "^4.21.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.18.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.6",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-env": "^7.23.6",
+    "@babel/preset-react": "^7.23.3",
+    "@babel/register": "^7.22.15",
+    "@testing-library/react": "^14.1.2",
+    "babel-jest": "^29.7.0",
+    "jest": "^27.5.1",
+    "react-test-renderer": "^18.2.0",
+    "react-testing-library": "^8.0.1"
+  }
+}
