@@ -29,7 +29,7 @@ EducationalDepartment/client> npm i
 
 5. Выполнить импорт дампа базы данных backupData.sql в PgAdmin 4
 
-Дальше в папке сервера изменить файл .env
+6. В папке сервера изменить файл .env
 
 ```
 PORT = 5000
@@ -41,13 +41,13 @@ DB_PORT = 5432
 SECRET_KEY = random_key_123 
 ```
 
-Запусить сервер
+7. Запусить сервер
 
 ```
 EducationalDepartment/server> npm run dev
 ```
 
-Запустить клиент через второй терминал
+8. Запустить клиент через второй терминал
 
 ```
 EducationalDepartment/clent> npm start
